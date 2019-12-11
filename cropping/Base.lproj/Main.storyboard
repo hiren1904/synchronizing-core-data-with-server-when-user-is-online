@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,57 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cropping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="byw-rr-cSN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="334"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tXe-Ob-X80">
+                                        <rect key="frame" x="0.0" y="0.5" width="414" height="333"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="334" id="89h-DS-fxm"/>
+                                            <constraint firstAttribute="width" constant="414" id="UNP-pN-rg2"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="tXe-Ob-X80" secondAttribute="bottom" id="FBk-gG-z8g"/>
+                                    <constraint firstItem="tXe-Ob-X80" firstAttribute="top" secondItem="kT8-8Y-yQe" secondAttribute="top" id="XzH-p2-6HB"/>
+                                    <constraint firstItem="tXe-Ob-X80" firstAttribute="centerX" secondItem="byw-rr-cSN" secondAttribute="centerX" id="e1k-P0-cje"/>
+                                    <constraint firstItem="tXe-Ob-X80" firstAttribute="leading" secondItem="byw-rr-cSN" secondAttribute="leading" id="m5r-u8-9US"/>
+                                    <constraint firstAttribute="trailing" secondItem="tXe-Ob-X80" secondAttribute="trailing" id="tAr-si-rUG"/>
+                                    <constraint firstItem="tXe-Ob-X80" firstAttribute="bottom" secondItem="kT8-8Y-yQe" secondAttribute="bottom" id="tao-XZ-viZ"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="pvh-OO-rjD"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="kT8-8Y-yQe"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="byw-rr-cSN" secondAttribute="bottom" constant="484" id="EWl-LH-h7m"/>
+                            <constraint firstItem="byw-rr-cSN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YGh-Kn-SRu"/>
+                            <constraint firstAttribute="trailing" secondItem="byw-rr-cSN" secondAttribute="trailing" id="YTu-2x-L8C"/>
+                            <constraint firstItem="byw-rr-cSN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xvO-Ex-aMX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imgheight" destination="89h-DS-fxm" id="22G-MZ-sNh"/>
+                        <outlet property="imgview" destination="tXe-Ob-X80" id="16L-7z-SfF"/>
+                        <outlet property="imgwidth" destination="UNP-pN-rg2" id="EM0-o5-Z9z"/>
+                        <outlet property="scrView" destination="byw-rr-cSN" id="VxX-ua-ZH2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="person.circle" catalog="system" width="64" height="60"/>
+    </resources>
 </document>
