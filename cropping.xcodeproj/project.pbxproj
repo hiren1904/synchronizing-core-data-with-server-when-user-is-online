@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D7E3C0923A1FBC600E435A0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7E3C0823A1FBC600E435A0 /* CoreData.framework */; };
+		5D7E3C0C23A1FBF500E435A0 /* cropping.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E3C0A23A1FBF500E435A0 /* cropping.xcdatamodeld */; };
 		5DABA18223A0E5B000A20226 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DABA18123A0E5B000A20226 /* AppDelegate.swift */; };
 		5DABA18423A0E5B000A20226 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DABA18323A0E5B000A20226 /* SceneDelegate.swift */; };
 		5DABA18623A0E5B000A20226 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DABA18523A0E5B000A20226 /* ViewController.swift */; };
 		5DABA18923A0E5B000A20226 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DABA18723A0E5B000A20226 /* Main.storyboard */; };
 		5DABA18B23A0E5B200A20226 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DABA18A23A0E5B200A20226 /* Assets.xcassets */; };
 		5DABA18E23A0E5B200A20226 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DABA18C23A0E5B200A20226 /* LaunchScreen.storyboard */; };
+		63B87C0D9BB8F12D198F1724 /* Pods_cropping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4696A9A550A75484146BFC01 /* Pods_cropping.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23F7BA6A8731DCF99892B081 /* Pods-cropping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cropping.release.xcconfig"; path = "Target Support Files/Pods-cropping/Pods-cropping.release.xcconfig"; sourceTree = "<group>"; };
+		4696A9A550A75484146BFC01 /* Pods_cropping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cropping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F4FBAD7DC57C57DCB296675 /* Pods-cropping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cropping.debug.xcconfig"; path = "Target Support Files/Pods-cropping/Pods-cropping.debug.xcconfig"; sourceTree = "<group>"; };
+		5D7E3C0823A1FBC600E435A0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5D7E3C0B23A1FBF500E435A0 /* cropping.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = cropping.xcdatamodel; sourceTree = "<group>"; };
 		5DABA17E23A0E5B000A20226 /* cropping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cropping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DABA18123A0E5B000A20226 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DABA18323A0E5B000A20226 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +39,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D7E3C0923A1FBC600E435A0 /* CoreData.framework in Frameworks */,
+				63B87C0D9BB8F12D198F1724 /* Pods_cropping.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D7E3C0723A1FBC600E435A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D7E3C0823A1FBC600E435A0 /* CoreData.framework */,
+				4696A9A550A75484146BFC01 /* Pods_cropping.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5DABA17523A0E5B000A20226 = {
 			isa = PBXGroup;
 			children = (
 				5DABA18023A0E5B000A20226 /* cropping */,
 				5DABA17F23A0E5B000A20226 /* Products */,
+				5D7E3C0723A1FBC600E435A0 /* Frameworks */,
+				CEAAEE8E3F53BD6F3D08F91B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +84,19 @@
 				5DABA18A23A0E5B200A20226 /* Assets.xcassets */,
 				5DABA18C23A0E5B200A20226 /* LaunchScreen.storyboard */,
 				5DABA18F23A0E5B200A20226 /* Info.plist */,
+				5D7E3C0A23A1FBF500E435A0 /* cropping.xcdatamodeld */,
 			);
 			path = cropping;
+			sourceTree = "<group>";
+		};
+		CEAAEE8E3F53BD6F3D08F91B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F4FBAD7DC57C57DCB296675 /* Pods-cropping.debug.xcconfig */,
+				23F7BA6A8731DCF99892B081 /* Pods-cropping.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +106,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DABA19223A0E5B200A20226 /* Build configuration list for PBXNativeTarget "cropping" */;
 			buildPhases = (
+				F37878EEF368386B8C9EB56C /* [CP] Check Pods Manifest.lock */,
 				5DABA17A23A0E5B000A20226 /* Sources */,
 				5DABA17B23A0E5B000A20226 /* Frameworks */,
 				5DABA17C23A0E5B000A20226 /* Resources */,
+				0896D46309DF0447BB48F6F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +167,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0896D46309DF0447BB48F6F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cropping/Pods-cropping-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cropping/Pods-cropping-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cropping/Pods-cropping-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F37878EEF368386B8C9EB56C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cropping-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5DABA17A23A0E5B000A20226 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -141,6 +217,7 @@
 				5DABA18623A0E5B000A20226 /* ViewController.swift in Sources */,
 				5DABA18223A0E5B000A20226 /* AppDelegate.swift in Sources */,
 				5DABA18423A0E5B000A20226 /* SceneDelegate.swift in Sources */,
+				5D7E3C0C23A1FBF500E435A0 /* cropping.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +359,7 @@
 		};
 		5DABA19323A0E5B200A20226 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F4FBAD7DC57C57DCB296675 /* Pods-cropping.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +377,7 @@
 		};
 		5DABA19423A0E5B200A20226 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23F7BA6A8731DCF99892B081 /* Pods-cropping.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -336,6 +415,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5D7E3C0A23A1FBF500E435A0 /* cropping.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5D7E3C0B23A1FBF500E435A0 /* cropping.xcdatamodel */,
+			);
+			currentVersion = 5D7E3C0B23A1FBF500E435A0 /* cropping.xcdatamodel */;
+			path = cropping.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5DABA17623A0E5B000A20226 /* Project object */;
 }
